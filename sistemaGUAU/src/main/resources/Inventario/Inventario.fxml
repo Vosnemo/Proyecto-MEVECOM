@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="APaneInventario" prefHeight="620.0" prefWidth="740.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventario.InventarioController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+    <children>
+        <Label layoutX="290.0" layoutY="14.0" text="Inventario" textAlignment="CENTER">
+            <font>
+                <Font size="36.0" />
+            </font>
+        </Label>
+        <TableView fx:id="tblProductos" layoutX="8.0" layoutY="72.0" prefHeight="533.0" prefWidth="568.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="45.0" text="ID" />
+                <TableColumn fx:id="nombre" prefWidth="148.0" text="Nombre" />
+                <TableColumn fx:id="existencias" prefWidth="95.0" text="Existencias" />
+                <TableColumn fx:id="precio" prefWidth="75.0" text="Precio" />
+                <TableColumn fx:id="marca" prefWidth="66.0" text="Marca" />
+                <TableColumn fx:id="peso" prefWidth="99.0" text="Peso" />
+            </columns>
+        </TableView>
+        <JFXTextField fx:id="txtNombre" layoutX="586.0" layoutY="93.0" prefHeight="26.0" prefWidth="139.0" promptText="Nombre Producto" />
+        <Label layoutX="586.0" layoutY="68.0" text="Buscador" />
+        <JFXButton fx:id="btnBuscar" layoutX="630.0" layoutY="132.0" mnemonicParsing="false" onAction="#buscarPorNombre" text="Buscar" />
+        <JFXButton fx:id="btnAgregarProducto" layoutX="597.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnAgregarProductoHandel" prefHeight="26.0" prefWidth="118.0" text="Agregar Producto" />
+        <JFXButton fx:id="btnModificar" layoutX="597.0" layoutY="368.0" mnemonicParsing="false" onAction="#btnModificarHandle" text="Modificar Producto" />
+        <JFXButton fx:id="btnRegresar" layoutX="663.0" layoutY="565.0" mnemonicParsing="false" onAction="#btnRegresarHandle" text="Regresar" />
+        <JFXButton fx:id="btnEliminarFiltro" layoutX="612.0" layoutY="169.0" mnemonicParsing="false" onAction="#limpiarFiltro" text="Eliminar filtro" />
+    </children>
+</AnchorPane>
