@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="329.0" prefWidth="261.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Login.FormLoginController">
+    <stylesheets>
+        <URL value="@/styles/Styles.css" />
+    </stylesheets>
+    <children>
+        <Label layoutX="9.0" layoutY="30.0" text="Iniciar Sesion">
+         <font>
+            <Font size="36.0" />
+         </font></Label>
+        <JFXTextField fx:id="txtUsuario" layoutX="56.0" layoutY="117.0" promptText="Usuario" />
+        <JFXPasswordField fx:id="txtPassword" layoutX="56.0" layoutY="165.0" promptText="Contraseña" />
+        <JFXButton fx:id="btnGuardar" layoutX="56.0" layoutY="225.0" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+        <JFXButton fx:id="btnCancelar" layoutX="143.0" layoutY="225.0" mnemonicParsing="false" text="Cancelar" />
+    </children>
+</AnchorPane>
